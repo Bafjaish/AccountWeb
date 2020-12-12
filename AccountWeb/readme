@@ -1,0 +1,6 @@
+this is the second app but with using of Migrations concept wih EF.
+
+same gose to the first one, I have creat the model class which has the datasbe model properties.
+then with the useing of Nug packets console, I have enablle the Migrations and then I added it to the server. 
+then with the use of addview, it helps to add the four concepts (CRUD) automatically witht the controllers as well.
+
