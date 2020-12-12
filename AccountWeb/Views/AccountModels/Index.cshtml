@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AccountWeb.Models.AccountModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountHolder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BankName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpeningDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.AccountNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AccountHolder)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CurrentBalance)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BankName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OpeningDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IsActive)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.AccountNumber }) |
+        @Html.ActionLink("Details", "Details", new { id = item.AccountNumber }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.AccountNumber })
+    </td>
+</tr>
+}
+
+</table>
